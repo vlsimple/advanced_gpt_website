@@ -16,7 +16,7 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 def create_lead(name, phone, address):
   url = "https://api.airtable.com/v0/appM1yx0NobvowCAg/Leads"  # Change this to your Airtable API URL
   headers = {
-      "Authorization": AIRTABLE_API_KEY,
+      "Authorization": f"Bearer {AIRTABLE_API_KEY}",
       "Content-Type": "application/json"
   }
   data = {
